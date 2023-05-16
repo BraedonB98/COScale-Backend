@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const articleSchema = new Schema({
+const judgeSchema = new Schema({
   firstName: { type: String },
   lastName: { type: String },
   district: { type: String },
@@ -24,4 +24,4 @@ const articleSchema = new Schema({
   cases: [{ type: mongoose.Types.ObjectId, ref: "Case" }],
 });
 
-module.exports = mongoose.model("Article", articleSchema);
+module.exports = mongoose.model("Judge", judgeSchema);
